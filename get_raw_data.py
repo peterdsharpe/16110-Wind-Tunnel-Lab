@@ -2,7 +2,10 @@
 # Imports all raw data from the *.csv files taken during the experiment.
 
 import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.style as style
 
+style.use("seaborn")
 
 def parse_wind_tunnel_csv(filename):
     """
@@ -98,3 +101,10 @@ def parse_manometer_csv(filename):
 manometer_40_mph_angle_1, manometer_40_mph_angle_2, manometer_60_mph_angle_1, manometer_60_mph_angle_2 = parse_manometer_csv(
     'data/manometer_readings.csv'
 )
+
+if __name__ == "__main__":
+    plt.bar(np.arange(len(manometer_40_mph_angle_1))+1,manometer_40_mph_angle_1)
+    plt.title("Manometer Readings; 40 mph case, angle 1")
+    plt.xlabel("Probe Number")
+    plt.ylabel("Manometer Reading [inches]")
+    plt.show()

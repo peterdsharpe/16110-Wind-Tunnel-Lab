@@ -8,6 +8,8 @@ import matplotlib.pyplot as plt
 import matplotlib.style as style
 import pint
 
+style.use("seaborn")
+
 # Set up Pint
 u = pint.UnitRegistry()
 
@@ -50,21 +52,21 @@ mean_load_cell_voltage_8oz_after_experiment = torch.tensor(
 )
 
 # And standard deviations.
-stdev_load_cell_voltage_no_weight_before_experiment = torch.tensor(
-    get_stdev_of_mean(raw_data.wt_load_cell_tare_no_weight_before_experiments[:, 0])
-)
-stdev_load_cell_voltage_no_weight_after_experiment = torch.tensor(
-    get_stdev_of_mean(raw_data.wt_load_cell_tare_no_weight_after_experiments[:, 0])
-)
-stdev_load_cell_voltage_2oz_after_experiment = torch.tensor(
-    get_stdev_of_mean(raw_data.wt_load_cell_tare_2oz_weight_after_experiments[:, 0])
-)
-stdev_load_cell_voltage_8oz_before_experiment = torch.tensor(
-    get_stdev_of_mean(raw_data.wt_load_cell_tare_8oz_weight_before_experiments[:, 0])
-)
-stdev_load_cell_voltage_8oz_after_experiment = torch.tensor(
-    get_stdev_of_mean(raw_data.wt_load_cell_tare_8oz_weight_after_experiments[:, 0])
-)
+# stdev_load_cell_voltage_no_weight_before_experiment = torch.tensor(
+#     get_stdev_of_mean(raw_data.wt_load_cell_tare_no_weight_before_experiments[:, 0])
+# )
+# stdev_load_cell_voltage_no_weight_after_experiment = torch.tensor(
+#     get_stdev_of_mean(raw_data.wt_load_cell_tare_no_weight_after_experiments[:, 0])
+# )
+# stdev_load_cell_voltage_2oz_after_experiment = torch.tensor(
+#     get_stdev_of_mean(raw_data.wt_load_cell_tare_2oz_weight_after_experiments[:, 0])
+# )
+# stdev_load_cell_voltage_8oz_before_experiment = torch.tensor(
+#     get_stdev_of_mean(raw_data.wt_load_cell_tare_8oz_weight_before_experiments[:, 0])
+# )
+# stdev_load_cell_voltage_8oz_after_experiment = torch.tensor(
+#     get_stdev_of_mean(raw_data.wt_load_cell_tare_8oz_weight_after_experiments[:, 0])
+# )
 
 # What are the weights of the calibration pieces?
 calibration_mass_oz = torch.tensor((
@@ -91,20 +93,20 @@ calibration_voltages = torch.stack([
 )
 
 # Plot the regression
-style.use("seaborn")
-plt.scatter(calibration_voltages.detach().numpy(), calibration_force_N.detach().numpy(), label="Calibration Data")
-calibration_voltages_for_plotting = torch.linspace(
-    calibration_voltages.detach().min(),
-    calibration_voltages.detach().max(),
-    100
-)
-calibration_forces_for_plotting = load_cell_slope * calibration_voltages_for_plotting + load_cell_offset
-plt.plot(calibration_voltages_for_plotting, calibration_forces_for_plotting, 'g', label="Linear Fit")
-plt.title("Load Cell Linearity")
-plt.xlabel("Voltage [V]")
-plt.ylabel("Force [N]")
-plt.legend()
-plt.show()
+if __name__ == "__main__":
+    plt.scatter(calibration_voltages.detach().numpy(), calibration_force_N.detach().numpy(), label="Calibration Data")
+    calibration_voltages_for_plotting = torch.linspace(
+        calibration_voltages.detach().min(),
+        calibration_voltages.detach().max(),
+        100
+    )
+    calibration_forces_for_plotting = load_cell_slope * calibration_voltages_for_plotting + load_cell_offset
+    plt.plot(calibration_voltages_for_plotting, calibration_forces_for_plotting, 'g', label="Linear Fit")
+    plt.title("Load Cell Linearity")
+    plt.xlabel("Voltage [V]")
+    plt.ylabel("Force [N]")
+    plt.legend()
+    plt.show()
 
 ### Use the regression to find the load at each test case
 # Find the voltages at each speed
@@ -147,6 +149,38 @@ voltages_at_speed = torch.stack((
     mean_load_cell_voltage_approx_73_mph
 ))
 
+# And their standard deviations
+stdev_load_cell_voltage_approx_30_mph = torch.tensor(
+    get_stdev_of_mean(raw_data.wt_raw_data_30_mph[:, 0])
+)
+stdev_load_cell_voltage_approx_35_mph = torch.tensor(
+    get_stdev_of_mean(raw_data.wt_raw_data_35_mph[:, 0])
+)
+stdev_load_cell_voltage_approx_40_mph = torch.tensor(
+    get_stdev_of_mean(raw_data.wt_raw_data_40_mph[:, 0])
+)
+stdev_load_cell_voltage_approx_50_mph = torch.tensor(
+    get_stdev_of_mean(raw_data.wt_raw_data_50_mph[:, 0])
+)
+stdev_load_cell_voltage_approx_60_mph = torch.tensor(
+    get_stdev_of_mean(raw_data.wt_raw_data_60_mph[:, 0])
+)
+stdev_load_cell_voltage_approx_70_mph = torch.tensor(
+    get_stdev_of_mean(raw_data.wt_raw_data_70_mph[:, 0])
+)
+stdev_load_cell_voltage_approx_73_mph = torch.tensor(
+    get_stdev_of_mean(raw_data.wt_raw_data_73_mph[:, 0])
+)
+stdevs_of_voltages_at_speed = torch.stack((
+    stdev_load_cell_voltage_approx_30_mph,
+    stdev_load_cell_voltage_approx_35_mph,
+    stdev_load_cell_voltage_approx_40_mph,
+    stdev_load_cell_voltage_approx_50_mph,
+    stdev_load_cell_voltage_approx_60_mph,
+    stdev_load_cell_voltage_approx_70_mph,
+    stdev_load_cell_voltage_approx_73_mph,
+))
+
 # Find the forces at each speed
 forces_at_speed_in_newtons = (load_cell_slope * voltages_at_speed + load_cell_offset)
 
@@ -181,11 +215,6 @@ mean_raw_q_approx_73_mph_in_torr = torch.tensor(
     requires_grad=True
 )
 
-# Find the standard deviations of dynamic pressure
-stdev_raw_q_approx_30_mph_in_torr = torch.tensor(
-    get_stdev_of_mean(raw_data.wt_raw_data_30_mph[:, 1])
-)
-
 raw_q_at_speed_in_torr = torch.stack((
     mean_raw_q_approx_30_mph_in_torr,
     mean_raw_q_approx_35_mph_in_torr,
@@ -194,6 +223,39 @@ raw_q_at_speed_in_torr = torch.stack((
     mean_raw_q_approx_60_mph_in_torr,
     mean_raw_q_approx_70_mph_in_torr,
     mean_raw_q_approx_73_mph_in_torr
+))
+
+# Find the standard deviations of dynamic pressure
+stdev_raw_q_approx_30_mph_in_torr = torch.tensor(
+    get_stdev_of_mean(raw_data.wt_raw_data_30_mph[:, 1])
+)
+stdev_raw_q_approx_35_mph_in_torr = torch.tensor(
+    get_stdev_of_mean(raw_data.wt_raw_data_35_mph[:, 1])
+)
+stdev_raw_q_approx_40_mph_in_torr = torch.tensor(
+    get_stdev_of_mean(raw_data.wt_raw_data_40_mph[:, 1])
+)
+stdev_raw_q_approx_50_mph_in_torr = torch.tensor(
+    get_stdev_of_mean(raw_data.wt_raw_data_50_mph[:, 1])
+)
+stdev_raw_q_approx_60_mph_in_torr = torch.tensor(
+    get_stdev_of_mean(raw_data.wt_raw_data_60_mph[:, 1])
+)
+stdev_raw_q_approx_70_mph_in_torr = torch.tensor(
+    get_stdev_of_mean(raw_data.wt_raw_data_70_mph[:, 1])
+)
+stdev_raw_q_approx_73_mph_in_torr = torch.tensor(
+    get_stdev_of_mean(raw_data.wt_raw_data_73_mph[:, 1])
+)
+
+stdevs_of_raw_q_at_speed_in_torr = torch.stack((
+    stdev_raw_q_approx_30_mph_in_torr,
+    stdev_raw_q_approx_35_mph_in_torr,
+    stdev_raw_q_approx_40_mph_in_torr,
+    stdev_raw_q_approx_50_mph_in_torr,
+    stdev_raw_q_approx_60_mph_in_torr,
+    stdev_raw_q_approx_70_mph_in_torr,
+    stdev_raw_q_approx_73_mph_in_torr,
 ))
 
 raw_q_at_zero_speed_in_torr = torch.tensor(
@@ -205,3 +267,4 @@ q_at_speed_in_torr = raw_q_at_speed_in_torr - raw_q_at_zero_speed_in_torr
 pascals_per_torr = (1 * u.torr).to("Pa").magnitude
 
 q_at_speed_in_Pa = q_at_speed_in_torr * pascals_per_torr
+

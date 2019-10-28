@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ec304b62-582a-40b3-995e-5d1f03248cfc" name="Default Changelist" comment="" />
+    <list default="true" id="ec304b62-582a-40b3-995e-5d1f03248cfc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Lab Report.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ambient_conditions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/combined_graph/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/combined_plot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/computational.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/direct_force_measurement.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/direct_force_measurement.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linearity.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manometer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manometer_folded.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reference_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wake_40.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wake_60.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wake_measurement.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wake_survey_measurement.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/Lab Report-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/Lab Report-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab Report.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Report.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/get_raw_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/get_raw_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/process_data.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,13 +38,17 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/16110_Wind_Tunnel_Lab" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1SexcUEBlchbjc89pOf1f6dhk3E" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/data" />
+    <property name="ignore_missing_gitignore" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -35,6 +61,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Google Drive\School\Grad School\2019 Fall\16.110\16110-Wind-Tunnel-Lab" />
       <recent name="C:\Users\User\Google Drive\School\Grad School\2019 Fall\16.110\Wind Tunnel Lab\data" />
     </key>
   </component>
@@ -50,8 +77,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.process_data">
-    <configuration name="get_raw_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.combined_plot">
+    <configuration name="combined_plot" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Wind Tunnel Lab" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -61,7 +88,26 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/get_raw_data.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/combined_plot.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="computational" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Wind Tunnel Lab" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/computational.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -89,13 +135,51 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="reference_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Wind Tunnel Lab" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/reference_data.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="wake_measurement" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Wind Tunnel Lab" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wake_measurement.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.process_data" />
-        <item itemvalue="Python.process_data" />
-        <item itemvalue="Python.process_data" />
-        <item itemvalue="Python.process_data" />
-        <item itemvalue="Python.process_data" />
+        <item itemvalue="Python.combined_plot" />
+        <item itemvalue="Python.combined_plot" />
+        <item itemvalue="Python.combined_plot" />
+        <item itemvalue="Python.combined_plot" />
+        <item itemvalue="Python.combined_plot" />
       </list>
     </recent_temporary>
   </component>
@@ -110,6 +194,7 @@
       <option name="presentableId" value="Default" />
       <updated>1571937941963</updated>
       <workItem from="1571937943071" duration="20724000" />
+      <workItem from="1572043220203" duration="37089000" />
     </task>
     <servers />
   </component>
@@ -121,10 +206,15 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
