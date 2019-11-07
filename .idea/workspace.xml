@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ec304b62-582a-40b3-995e-5d1f03248cfc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Lab Report.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ambient_conditions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/combined_graph/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/combined_plot.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/computational.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/direct_force_measurement.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/direct_force_measurement.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/linearity.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manometer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manometer_folded.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reference_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wake_40.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wake_60.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wake_measurement.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wake_survey_measurement.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/Lab Report-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/Lab Report-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab Report.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Lab Report.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/get_raw_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/get_raw_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/process_data.py" afterDir="false" />
-    </list>
+    <list default="true" id="ec304b62-582a-40b3-995e-5d1f03248cfc" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +60,9 @@
       <module name="Wind Tunnel Lab" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -101,6 +82,9 @@
       <module name="Wind Tunnel Lab" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -120,6 +104,9 @@
       <module name="Wind Tunnel Lab" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -139,6 +126,9 @@
       <module name="Wind Tunnel Lab" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -158,6 +148,9 @@
       <module name="Wind Tunnel Lab" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -195,6 +188,7 @@
       <updated>1571937941963</updated>
       <workItem from="1571937943071" duration="20724000" />
       <workItem from="1572043220203" duration="37089000" />
+      <workItem from="1572293056603" duration="389000" />
     </task>
     <servers />
   </component>
